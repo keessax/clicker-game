@@ -1,10 +1,12 @@
 extends Button
 
 func _ready():
-	pass
+	set_text("Tap!! (+" + str(player.clickMulti) + " $)")
 
 
+func _process(delta):
+	set_text("Tap!! (+" + str(player.clickMulti) + " $)")
 
 
-func _on_ClickSkill_pressed():
-	set_text("Klikaj! (" + str(player.clickLevel) + ")")
+func _on_MainClicker_pressed():
+	player.cash += player.clickMulti

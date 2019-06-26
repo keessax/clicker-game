@@ -6,6 +6,6 @@ func _ready():
 
 func _process(delta):
 	if player.stands > 0:
-		set_text("Stragan (" + str(player.stands) + ") \nPrzychody: " + str((player.standCoins * player.stands) * player.standMulti) + " $ \nKoszt: " + str(player.standPrice))
+		set_text("Stragan (" + str(player.stands) + ") \nPrzychody: " + str(player.standEarn) + " $ \nKoszt: " + str(player.standPrice))
 	else:
 		set_text("Stragan (" + str(player.stands) + ") \nPrzychody: 0 $ \nKoszt: " + str(player.standPrice))

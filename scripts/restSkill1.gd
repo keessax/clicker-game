@@ -25,5 +25,4 @@ func _on_restSkill1_pressed():
 	set_text("Kupiony")
 	skill1Active = true
 	player.restMulti += 1
-	player.restTimer /= 2
 	player.cash -= skill1Price
