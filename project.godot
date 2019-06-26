@@ -16,12 +16,12 @@ _global_script_class_icons={
 [application]
 
 config/name="Nowy projekt gry"
-run/main_scene="res://World.tscn"
+run/main_scene="res://scenes/World.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
-player="*res://player.gd"
+player="*res://scripts/player.gd"
 
 [rendering]
 
