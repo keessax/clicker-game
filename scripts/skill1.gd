@@ -6,7 +6,7 @@ var skill1Active : bool
 func _ready():
 	skill1Price = 500
 	skill1Active = false
-	set_text("Lv.1 (" + str(skill1Price) + "$)")
+	set_text("Lv.1 (" + str(skill1Price) + " $)")
 	hide()
 
 func _process(delta):
@@ -24,6 +24,5 @@ func _process(delta):
 func _on_skill1_pressed():
 	set_text("Kupiony")
 	skill1Active = true
-	player.standTimer /= 2
 	player.standMulti += 1
 	player.cash -= skill1Price

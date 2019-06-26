@@ -1,21 +1,19 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scripts/GUI.gd" type="Script" id=1]
 [ext_resource path="res://scripts/Upgrades.gd" type="Script" id=2]
 [ext_resource path="res://scripts/BuyStand.gd" type="Script" id=3]
 [ext_resource path="res://scripts/StandLabel.gd" type="Script" id=4]
-[ext_resource path="res://scripts/StandTimer.gd" type="Script" id=5]
-[ext_resource path="res://scripts/skill1.gd" type="Script" id=6]
-[ext_resource path="res://scripts/standProgressLabel.gd" type="Script" id=7]
-[ext_resource path="res://scripts/BuyStand2.gd" type="Script" id=8]
-[ext_resource path="res://scripts/RestLabel.gd" type="Script" id=9]
-[ext_resource path="res://scripts/RestTimer.gd" type="Script" id=10]
-[ext_resource path="res://scripts/restSkill1.gd" type="Script" id=11]
-[ext_resource path="res://scripts/restProgressLabel.gd" type="Script" id=12]
-[ext_resource path="res://scripts/Label.gd" type="Script" id=13]
-[ext_resource path="res://scripts/MainClicker.gd" type="Script" id=14]
-[ext_resource path="res://scripts/ClickSkill.gd" type="Script" id=15]
-[ext_resource path="res://scripts/TimerOneSec.gd" type="Script" id=16]
+[ext_resource path="res://scripts/skill1.gd" type="Script" id=5]
+[ext_resource path="res://scripts/standProgressLabel.gd" type="Script" id=6]
+[ext_resource path="res://scripts/BuyStand2.gd" type="Script" id=7]
+[ext_resource path="res://scripts/RestLabel.gd" type="Script" id=8]
+[ext_resource path="res://scripts/restSkill1.gd" type="Script" id=9]
+[ext_resource path="res://scripts/restProgressLabel.gd" type="Script" id=10]
+[ext_resource path="res://scripts/Label.gd" type="Script" id=11]
+[ext_resource path="res://scripts/MainClicker.gd" type="Script" id=12]
+[ext_resource path="res://scripts/ClickSkill.gd" type="Script" id=13]
+[ext_resource path="res://scripts/TimerOneSec.gd" type="Script" id=14]
 
 [node name="World" type="Node"]
 
@@ -29,82 +27,76 @@ script = ExtResource( 2 )
 
 [node name="BuyStand" type="Button" parent="GUI/Upgrades/Skill1"]
 margin_left = 30.0
-margin_top = 190.0
+margin_top = 270.0
 margin_right = 332.0
-margin_bottom = 260.0
+margin_bottom = 340.0
 text = "Kup"
 align = 2
 script = ExtResource( 3 )
 
 [node name="StandLabel" type="Label" parent="GUI/Upgrades/Skill1"]
 margin_left = 40.0
-margin_top = 200.0
+margin_top = 280.0
 margin_right = 220.0
-margin_bottom = 253.0
+margin_bottom = 333.0
 text = "Stragan (Zysk: )
 Cena"
 script = ExtResource( 4 )
 
-[node name="StandTimer" type="Timer" parent="GUI/Upgrades/Skill1"]
-script = ExtResource( 5 )
-
 [node name="standSkill1" type="Button" parent="GUI/Upgrades/Skill1"]
 margin_left = 342.0
-margin_top = 190.0
+margin_top = 270.0
 margin_right = 460.0
-margin_bottom = 260.0
+margin_bottom = 340.0
 text = "skill1"
-script = ExtResource( 6 )
+script = ExtResource( 5 )
 
 [node name="standProgressLabel" type="Label" parent="GUI/Upgrades/Skill1"]
 margin_left = 160.0
-margin_top = 220.0
+margin_top = 300.0
 margin_right = 270.0
-margin_bottom = 250.0
+margin_bottom = 330.0
 text = "[----------]"
 align = 1
-script = ExtResource( 7 )
+script = ExtResource( 6 )
 
 [node name="Skill2" type="Node2D" parent="GUI/Upgrades"]
 
 [node name="BuyStand2" type="Button" parent="GUI/Upgrades/Skill2"]
 margin_left = 30.0
-margin_top = 270.0
+margin_top = 350.0
 margin_right = 332.0
-margin_bottom = 340.0
+margin_bottom = 420.0
 text = "Kup"
 align = 2
-script = ExtResource( 8 )
+script = ExtResource( 7 )
 
 [node name="RestLabel" type="Label" parent="GUI/Upgrades/Skill2"]
 margin_left = 40.0
-margin_top = 280.0
+margin_top = 360.0
 margin_right = 220.0
-margin_bottom = 330.0
+margin_bottom = 410.0
 text = "Restauracja (Z..."
-script = ExtResource( 9 )
-
-[node name="RestTimer" type="Timer" parent="GUI/Upgrades/Skill2"]
-script = ExtResource( 10 )
+script = ExtResource( 8 )
 
 [node name="restSkill1" type="Button" parent="GUI/Upgrades/Skill2"]
 margin_left = 342.0
-margin_top = 270.0
+margin_top = 350.0
 margin_right = 460.0
-margin_bottom = 340.0
+margin_bottom = 420.0
 text = "skill2"
-script = ExtResource( 11 )
+script = ExtResource( 9 )
 
 [node name="restProgressLabel" type="Label" parent="GUI/Upgrades/Skill2"]
 margin_left = 160.0
-margin_top = 300.0
+margin_top = 380.0
 margin_right = 270.0
-margin_bottom = 331.0
+margin_bottom = 411.0
 text = "[----------]
 "
 align = 1
 valign = 1
-script = ExtResource( 12 )
+script = ExtResource( 10 )
 
 [node name="MainLabel" type="Label" parent="GUI"]
 margin_left = 30.0
@@ -112,36 +104,32 @@ margin_top = 10.0
 margin_right = 990.0
 margin_bottom = 130.0
 text = "$:"
-script = ExtResource( 13 )
+script = ExtResource( 11 )
 
 [node name="MainClicker" type="Button" parent="GUI"]
 margin_left = 30.0
-margin_top = 350.0
+margin_top = 430.0
 margin_right = 332.0
-margin_bottom = 390.0
+margin_bottom = 470.0
 text = "Klikaj!"
-script = ExtResource( 14 )
+script = ExtResource( 12 )
 
 [node name="ClickSkill" type="Button" parent="GUI"]
 margin_left = 342.0
-margin_top = 350.0
+margin_top = 430.0
 margin_right = 460.0
-margin_bottom = 390.0
+margin_bottom = 470.0
 text = "click skill"
-script = ExtResource( 15 )
+script = ExtResource( 13 )
 
 [node name="TimerOneSec" type="Timer" parent="."]
 autostart = true
-script = ExtResource( 16 )
-[connection signal="pressed" from="GUI/Upgrades/Skill1/BuyStand" to="GUI/Upgrades/Skill1/StandTimer" method="_on_BuyStand_pressed"]
+script = ExtResource( 14 )
 [connection signal="pressed" from="GUI/Upgrades/Skill1/BuyStand" to="GUI/Upgrades/Skill1/BuyStand" method="_on_BuyStand_pressed"]
-[connection signal="timeout" from="GUI/Upgrades/Skill1/StandTimer" to="GUI/Upgrades/Skill1/StandTimer" method="_on_StandTimer_timeout"]
 [connection signal="pressed" from="GUI/Upgrades/Skill1/standSkill1" to="GUI/Upgrades/Skill1/standSkill1" method="_on_skill1_pressed"]
-[connection signal="pressed" from="GUI/Upgrades/Skill2/BuyStand2" to="GUI/Upgrades/Skill2/RestTimer" method="_on_BuyStand2_pressed"]
 [connection signal="pressed" from="GUI/Upgrades/Skill2/BuyStand2" to="GUI/Upgrades/Skill2/BuyStand2" method="_on_BuyStand2_pressed"]
-[connection signal="timeout" from="GUI/Upgrades/Skill2/RestTimer" to="GUI/Upgrades/Skill2/RestTimer" method="_on_RestTimer_timeout"]
 [connection signal="pressed" from="GUI/Upgrades/Skill2/restSkill1" to="GUI/Upgrades/Skill2/restSkill1" method="_on_restSkill1_pressed"]
-[connection signal="pressed" from="GUI/MainClicker" to="GUI" method="_on_MainClicker_pressed"]
-[connection signal="pressed" from="GUI/ClickSkill" to="GUI/MainClicker" method="_on_ClickSkill_pressed"]
+[connection signal="pressed" from="GUI/MainClicker" to="GUI/MainClicker" method="_on_MainClicker_pressed"]
+[connection signal="pressed" from="GUI/ClickSkill" to="GUI/MainLabel" method="_on_ClickSkill_pressed"]
 [connection signal="pressed" from="GUI/ClickSkill" to="GUI/ClickSkill" method="_on_ClickSkill_pressed"]
 [connection signal="timeout" from="TimerOneSec" to="GUI/MainLabel" method="_on_TimerOneSec_timeout"]
